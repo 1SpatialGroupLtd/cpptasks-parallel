@@ -21,6 +21,7 @@ import net.sf.antcontrib.cpptasks.borland.BorlandResourceCompiler;
 import net.sf.antcontrib.cpptasks.compaq.CompaqVisualFortranCompiler;
 import net.sf.antcontrib.cpptasks.compiler.Compiler;
 import net.sf.antcontrib.cpptasks.devstudio.DevStudioCCompiler;
+import net.sf.antcontrib.cpptasks.devstudio.DevStudioCSharpCompiler;
 import net.sf.antcontrib.cpptasks.devstudio.DevStudioMIDLCompiler;
 import net.sf.antcontrib.cpptasks.devstudio.DevStudio2005CCompiler;
 import net.sf.antcontrib.cpptasks.devstudio.DevStudioResourceCompiler;
@@ -207,6 +208,7 @@ public class CompilerEnum extends EnumeratedAttribute {
             new ProcessorEnumValue("bcc", BorlandCCompiler.getInstance()),
             new ProcessorEnumValue("msrc", DevStudioResourceCompiler
                     .getInstance()),
+                    new ProcessorEnumValue("csc", DevStudioCSharpCompiler.getInstance()),
             new ProcessorEnumValue("brc", BorlandResourceCompiler.getInstance()),
             new ProcessorEnumValue("df", CompaqVisualFortranCompiler
                     .getInstance()),
