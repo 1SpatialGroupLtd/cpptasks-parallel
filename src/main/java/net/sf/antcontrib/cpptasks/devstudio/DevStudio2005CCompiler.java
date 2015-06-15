@@ -44,7 +44,9 @@ public final class DevStudio2005CCompiler extends DevStudioCompatibleCCompiler {
     protected void addDebugSwitch(Vector args) {
         args.addElement("/Zi");
         args.addElement("/Od");
-        args.addElement("/RTC1");
+        // /RTC is not compatible with /clr
+        if (!args.contains("/clr"))
+            args.addElement("/RTC1");
         args.addElement("/D_DEBUG");
     }
     public Processor changeEnvironment(boolean newEnvironment, Environment env) {
